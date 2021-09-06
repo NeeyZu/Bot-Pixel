@@ -51,7 +51,7 @@ client.on('message', async message => {
 
 client.on('message', (msg) => {
     if (msg.content.startsWith('!dm-user')) {
-        if (!msg.member.hasPermission('ADMINISTRATOR')) return msg.channel.send('Vous ne pouvez pas éxecuter cet commande !')
+        if (!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.channel.send('Vous ne pouvez pas éxecuter cet commande !')
 
         const args = msg.content.split(" ").slice(0);
         let mp = args.join(" ")
